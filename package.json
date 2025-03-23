@@ -1,11 +1,13 @@
 {
   "name": "linkup-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "'Linkup MCP server'",
   "types": "build/index.d.ts",
-  "bin": "build/index.js",
+  "bin": {
+    "linkup-mcp-server": "build/index.js"
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && chmod 766 build/index.js",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "jest",
