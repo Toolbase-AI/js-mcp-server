@@ -110,9 +110,8 @@ export const main = async (): Promise<void> => {
   await server.connect(new StdioServerTransport());
 };
 
-if (require.main === module) {
-  main().catch((e) => {
-    console.error(`An error occurred: ${e.message}`);
-    process.exit(1);
-  });
-}
+main().catch((e) => {
+  console.error(`An error occurred: ${e.message}`);
+  process.exit(1);
+});
+
